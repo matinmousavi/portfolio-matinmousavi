@@ -51,27 +51,37 @@
     --color-bgContrast: #EBEBEB;
     --color-brand-primary: #024421;
     --color-brand-accent: #50B07C;
+    --color-border-default: #2bb05d;
     --color-text-primary: #13281C;
-    --color-border-default: #1B432A;
     --color-social-instagram: #541D3C;
     --color-social-telegram: #0C697A;
 }
 @layer theme {
     .dark {
-        --color-bgContrast: #1e1e1e;
+        --color-bgContrast: #050505;
         --color-brand-primary: #50B07C;
         --color-brand-accent: #024421;
         --color-textColor: #FFFFFF;
+        --color-border-default: #1B432A;
     }
 }
+.line-shadow-custom::after {
+    box-shadow: 3px 0 16px #1B432A;
+}
 .text-shadow-custom {
-    text-shadow: 15px 10px 0 #bdbdbd0b;
+    text-shadow: 8px 8px 6px #00000029;
+}
+.dark .text-shadow-custom {
+    text-shadow: 8px 8px 6px #ffffff20;
 }
 .link-hover {
     @apply relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-brand-primary after:transition-all after:duration-300 hover:after:w-full hover:after:left-auto hover:after:right-0 hover:text-brand-primary dark:hover:text-brand-primary;
 }
 .item-active {
     @apply text-brand-primary border-2 border-border-default rounded-2xl;
+}
+.item-active::after {
+    display: none;
 }
 .transition-400 {
     @apply transition-[0.4s];
