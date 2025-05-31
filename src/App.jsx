@@ -85,7 +85,7 @@ const App = () => {
 						</p>
 					</div>
 					<div className='w-5/12 flex items-center justify-center'>
-						<img src='./public/images/matinmousavi.png' alt='Profile' />
+						<img src='/images/matinmousavi.png' alt='matinmousavi photo' />
 					</div>
 				</section>
 			</div>
