@@ -1,39 +1,78 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 @font-face {
     font-family: "vazir";
-    src: url("/fonts/Vazir-Thin.woff2") format("woff2");
+    src: url("./assets/fonts/vazir/Vazir-Thin.woff2") format("woff2");
     font-style: normal;
     font-weight: 100;
     font-display: swap;
 }
 @font-face {
     font-family: "vazir";
-    src: url("/fonts/Vazir-Light.woff2") format("woff2");
+    src: url("./assets/fonts/vazir/Vazir-Light.woff2") format("woff2");
     font-style: normal;
     font-weight: 300;
     font-display: swap;
 }
 @font-face {
     font-family: "vazir";
-    src: url("/fonts/Vazir.woff2") format("woff2");
+    src: url("./assets/fonts/vazir/Vazir.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
 }
 @font-face {
     font-family: "vazir";
-    src: url("/fonts/Vazir-Medium.woff2") format("woff2");
+    src: url("./assets/fonts/vazir/Vazir-Medium.woff2") format("woff2");
     font-style: normal;
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: "vazir";
-    src: url("/fonts/Vazir-Bold.woff2") format("woff2");
+    src: url("./assets/fonts/vazir/Vazir-Bold.woff2") format("woff2");
     font-style: normal;
     font-weight: 700;
     font-display: swap;
 }
+@utility container {
+    padding-inline: 10px;
+    margin-inline: auto;
+    @variant sm {
+        padding-inline: 20px;
+    }
+    @variant lg {
+        padding-inline: 80px;
+    }
+}
 @theme {
-    --font-vazir: "vazir", "sans-serif";
+    --font-primary: "vazir", "sans-serif";
+    --color-textColor: #101010;
+    --color-bgContrast: #EBEBEB;
+    --color-brand-primary: #024421;
+    --color-brand-accent: #50B07C;
+    --color-text-primary: #13281C;
+    --color-border-default: #1B432A;
+    --color-social-instagram: #541D3C;
+    --color-social-telegram: #0C697A;
+}
+@layer theme {
+    .dark {
+        --color-bgContrast: #1e1e1e;
+        --color-brand-primary: #50B07C;
+        --color-brand-accent: #024421;
+        --color-textColor: #FFFFFF;
+    }
+}
+.text-shadow-custom {
+    text-shadow: 15px 10px 0 #bdbdbd0b;
+}
+.link-hover {
+    @apply relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-brand-primary after:transition-all after:duration-300 hover:after:w-full hover:after:left-auto hover:after:right-0 hover:text-brand-primary dark:hover:text-brand-primary;
+}
+.item-active {
+    @apply text-brand-primary border-2 border-border-default rounded-2xl;
+}
+.transition-400 {
+    @apply transition-[0.4s];
 }
