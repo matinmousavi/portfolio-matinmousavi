@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(false)
@@ -57,7 +57,7 @@ const Navbar = () => {
 
 				<label className='inline-flex items-center cursor-pointer'>
 					<input type='checkbox' className='sr-only peer' checked={isDarkMode} onChange={e => setIsDarkMode(e.target.checked)} />
-					<div className="relative w-11 h-6 bg-brand-accent rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-brand-primary peer-checked:after:bg-textColor after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-brand-primary"></div>
+					<div className="relative w-11 h-6 bg-brand-primary rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-brand-accent peer-checked:after:bg-textColor  after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-brand-primary"></div>
 				</label>
 			</div>
 		</nav>
