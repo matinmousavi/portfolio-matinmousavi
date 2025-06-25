@@ -4,8 +4,8 @@ import SectionTitle from '../components/SectionTitle'
 const AboutMe = () => {
 	return (
 		<div className='flex items-center justify-between'>
-			<div className='w-[430px] h-[430px] flex items-center justify-center'>
-				<img className='rounded-full object-cover size-full' src='/images/person-4.jpg' alt='matinmousavi photo' />
+			<div className='w-1/2 flex items-center justify-center'>
+				<img className='size-full' src='/images/person-4.png' alt='matinmousavi photo' />
 			</div>
 			<div className='w-6/12'>
 				<SectionTitle title='درباره من' />
