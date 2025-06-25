@@ -48,7 +48,7 @@
 @theme {
     --font-primary: "vazir", "sans-serif";
     --color-textColor: #101010;
-    --color-bgContrast: #EBEBEB;
+    --color-bgGray: #EBEBEB;
     --color-brand-primary: #326D4D;
     --color-brand-accent: #50B07C;
     --color-border-default: #2bb05d;
@@ -60,14 +60,14 @@
 }
 @layer theme {
     .dark {
-        --color-bgContrast: #050505;
+        --color-bgGray: #151515;
         --color-brand-accent: #024421;
         --color-textColor: #FFFFFF;
         --color-border-default: #1B432A;
     }
 }
 .line-shadow-custom::after {
-    box-shadow: 3px 0 16px #1B432A;
+    box-shadow: 3px 0 8px #063F20;
 }
 .text-shadow-custom {
     text-shadow: 8px 8px 6px #00000029;
@@ -79,7 +79,7 @@
     @apply relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-0 after:bg-brand-primary after:transition-all after:duration-300 hover:after:w-full hover:after:left-auto hover:after:right-0 hover:text-brand-primary dark:hover:text-brand-primary;
 }
 .item-active {
-    @apply  border-2 border-border-default rounded-2xl;
+    @apply border-2 border-border-default rounded-2xl;
 }
 .item-active::after {
     display: none;
