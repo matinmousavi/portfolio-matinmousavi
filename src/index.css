@@ -55,6 +55,8 @@
     --color-text-primary: #13281C;
     --color-social-instagram: #541D3C;
     --color-social-telegram: #0C697A;
+    --color-bgLight: #fefefe;
+    --color-bgDark: #000;
 }
 @layer theme {
     .dark {

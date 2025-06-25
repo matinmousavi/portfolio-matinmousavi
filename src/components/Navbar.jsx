@@ -11,7 +11,7 @@ const Navbar = () => {
 		}
 	}, [isDarkMode])
 	return (
-		<nav className='flex justify-between items-center dark:text-textColor py-3'>
+		<nav className='container flex justify-between items-center dark:text-textColor py-3'>
 			<ul className='flex justify-center items-center gap-10'>
 				<li>
 					<a href='#about' className='item-active px-3 py-2 link-hover'>

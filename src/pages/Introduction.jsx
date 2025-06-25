@@ -2,7 +2,7 @@ import Paragraph from '../components/Paragraph'
 
 const Introduction = () => {
 	return (
-		<section id='about' className='flex items-center justify-between'>
+		<div className='flex items-center justify-between'>
 			<div className='flex flex-col gap-y-4 w-6/12'>
 				<h1 className='text-2xl text-textColor'>توسعه دهنده سایت</h1>
 				<p
@@ -20,7 +20,7 @@ const Introduction = () => {
 			<div className='w-5/12 flex items-center justify-center'>
 				<img src='/images/matinmousavi.png' alt='matinmousavi photo' />
 			</div>
-		</section>
+		</div>
 	)
 }
 
